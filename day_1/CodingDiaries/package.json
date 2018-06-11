@@ -1,0 +1,16 @@
+{
+  "name": "codingdiaries",
+  "version": "1.0.0",
+  "description": "personal thoughts experience with coding",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dano",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
