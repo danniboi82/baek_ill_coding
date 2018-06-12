@@ -1,0 +1,11 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+}
+
+
+
+.card-img-top{
+    height: 250px;
+}
