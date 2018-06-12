@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.signup-box {
+    width: 600px;
+    margin: auto;
+    border: 1px solid gray;
+    padding: 50px;
+}
+
+button {
+    text-align: center;
+}
