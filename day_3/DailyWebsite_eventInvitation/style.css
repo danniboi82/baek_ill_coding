@@ -1,0 +1,32 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("https://www.poipubaygolf.com/wp-content/uploads/2017/02/Kauai-Oceanfront-Golf-Course.jpg");
+    background-size: cover;
+    font-family: 'Poiret One', cursive;
+    color: white;
+}
+
+.navbar {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+}
+
+nav.navbar.navbar-nav a.nav-link {
+    color: white;
+}
+
+.content-wrapper {
+    height: 500px;
+    width: 500px;
+    margin: 150px auto;
+    background: white;
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url('http://weclipart.com/gimg/64271E2CB07556DA/12829158-Tropical-golf-party-or-tournament-invitation-with-a-vintage-aged-feel-Golf-bags-with-golf-clubs-on-g-Stock-Vector.jpg');
+    background-size: 100%;
+
+}
+
+h1 {
+    font-family: 'Lobster Two', cursive;
+    color: lightsalmon;
+}
+
