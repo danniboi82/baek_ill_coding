@@ -1,0 +1,16 @@
+{
+  "name": "dokdo",
+  "version": "1.0.0",
+  "description": "dokdo, an integral part of Korea",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dano",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "viewerjs": "^1.1.0"
+  }
+}

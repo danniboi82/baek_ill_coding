@@ -1,0 +1,12 @@
+.dokdo-hero {
+    background-image: url(../images/dokdo.jpg);
+    background-size: cover;
+    height: 60vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.menu-cards {
+    height: 233px;
+}
