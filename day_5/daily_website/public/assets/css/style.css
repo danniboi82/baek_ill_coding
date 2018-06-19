@@ -2,9 +2,14 @@
     background-image: url(../images/dokdo.jpg);
     background-size: cover;
     height: 60vh;
-    width: 100vw;
+    width: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.section{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .menu-cards {

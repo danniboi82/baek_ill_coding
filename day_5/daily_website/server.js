@@ -11,6 +11,10 @@ app.get('/', (req, res)=>{
     res.render('index.ejs');
 })
 
+app.get('/about', (req, res)=>{
+    res.render('history.ejs')
+})
+
 app.listen(PORT, ()=>{
     console.log(`Welcome to port ${PORT}`)
 })
