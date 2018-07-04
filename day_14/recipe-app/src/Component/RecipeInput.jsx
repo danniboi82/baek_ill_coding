@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import './RecipeInput.css';
 
 class RecipeInput extends Component {
+    static defaultProps = {
+        onClose() {},
+        onSave() {}
+    }
     constructor(props) {
         super(props);
         this.state = {
@@ -19,6 +23,9 @@ class RecipeInput extends Component {
         this.handleChangeIng = this
             .handleChangeIng
             .bind(this);
+        this.handleSubmit = this
+            .handleSubmit
+            .bind(this)
     }
     handleIngredient = (e) => {
         const {ingredients} = this.state;
@@ -45,6 +52,16 @@ class RecipeInput extends Component {
         console.log("handleChange initiated")
         this.setState({
             [e.target.name]: e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.onSaver({...this.state});this.setState({
+            title: '',
+            instructions: '',
+            ingredients: [''],
+            img: ''
         })
     }
     render() {

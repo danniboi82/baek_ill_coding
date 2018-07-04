@@ -6,30 +6,45 @@ import RecipeList from './Component/RecipeList';
 import Recipes from './database/recipe';
 import RecipeInput from './Component/RecipeInput';
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      recipes : Recipes,
-      nextRecipeId: 3,
+      recipes: Recipes,
+      nextRecipeId: 7
     }
+  }
+
+  handleSave = (recipe) => {
+    console.log("Handlesave")
+    this.setState((prevState, props) => {
+      const newRecipe = {
+        ...recipe,
+        id: this.state.nextRecipeId
+      };
+      return {
+        nextRecipeId: prevState.nextRecipeId + 1,
+        recipes: [
+          ...this.state.recipes,
+          newRecipe
+        ]
+      }
+    })
   }
 
   render() {
     return (
       <div className="App">
-      {      console.log(this.state.recipes)
+        {console.log(this.state.recipes)
 }
         <Navbar/>
-        <RecipeInput/>
+        <RecipeInput onSave={this.handleSave}/>
         <RecipeList recipes={this.state.recipes}/>
       </div>
     );
   }
 }
 
-// Recipes.propTypes = {
-//   title: PropTypes.String
-// }
+// Recipes.propTypes = {   title: PropTypes.String }
 export default App;
 // {this   .props   .recipes   .map((r, index) => (<Recipe key={index}
 // {...r}/>))}       <Recipe title='Pasta' ingredients={['flour', 'water']}
@@ -38,5 +53,5 @@ export default App;
 // grease. Stir diced tomatoes, tomato sauce, and tomato paste into the pan.
 // Season with oregano, basil, salt, and pepper. Simmer spaghetti sauce for 1
 // hour, stirring occasionally.'
-// img='https://cdn5.norecipes.com/wp-content/uploads/2012/10/23052346/recipespag
-// hetti-meat-sauce-recipe.1024x1024-1.jpg'/>
+// img='https://cdn5.norecipes.com/wp-content/uploads/2012/10/23052346/recipespa
+// g hetti-meat-sauce-recipe.1024x1024-1.jpg'/>
