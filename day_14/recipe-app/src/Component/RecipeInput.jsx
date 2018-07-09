@@ -57,12 +57,12 @@ class RecipeInput extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.onSaver({...this.state});this.setState({
-            title: '',
-            instructions: '',
-            ingredients: [''],
-            img: ''
-        })
+        this
+            .props
+            .onSave({
+                ...this.state
+            });
+        this.setState({title: '', instructions: '', ingredients: [''], img: ''})
     }
     render() {
         const {title, instructions, img, ingredients} = this.state;
@@ -84,11 +84,7 @@ class RecipeInput extends Component {
 
         return (
             <div className="recipe-form-container">
-                <form
-                    onSubmit={() => {
-                    this.handleSubmit
-                }}
-                    className="recipe-form">
+                <form onSubmit={this.handleSubmit} className="recipe-form">
                     <button type="button" className="close-button" onClick={onClose}>X</button>
 
                     <div className="recipe-form-line">

@@ -10,8 +10,13 @@ class App extends Component {
     super(props);
     this.state = {
       recipes: Recipes,
-      nextRecipeId: 7
+      nextRecipeId: 7,
+      showForm: false
     }
+    this.handleSave = this
+      .handleSave
+      .bind(this);
+
   }
 
   handleSave = (recipe) => {
@@ -32,12 +37,17 @@ class App extends Component {
   }
 
   render() {
+    const {showForm} = this.state;
     return (
       <div className="App">
-        {console.log(this.state.recipes)
+
+        <Navbar clicked={() => this.setState({showForm: true})}/> {showForm
+          ? <RecipeInput
+              onSave={this.handleSave}
+              onClose={() => this.setState({showForm: false})}/>
+          : null
 }
-        <Navbar/>
-        <RecipeInput onSave={this.handleSave}/>
+        {console.log(this.state.showForm)}
         <RecipeList recipes={this.state.recipes}/>
       </div>
     );
